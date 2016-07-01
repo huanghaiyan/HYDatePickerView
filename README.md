@@ -1,9 +1,9 @@
 # HYDatePickerView
 使用时，导入头文件#import "HYDatePickerView.h"
-遵守HYDatePickerViewDelegate代理协议
-@interface ViewController ()<HYDatePickerViewDelegate>
+遵守HYDatePickerViewDelegate代理协议\n
+@interface ViewController ()<HYDatePickerViewDelegate>\n
 {
-    HYDatePickerView *pickerView;
+    HYDatePickerView *pickerView;\n
 }
 
 点击时，弹出
