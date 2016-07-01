@@ -45,11 +45,9 @@ if (pickerView == nil){
         
         [dateFormat setDateFormat:@"dd-MM-yyyy"];
         
-        
         [self.dateTextField setText:[dateFormat stringFromDate:date]];
         
     } else {
-        
         
     }
     
