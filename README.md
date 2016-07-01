@@ -29,8 +29,6 @@ if (pickerView == nil){
   
 实现代理方法
 
-#pragma mark -DatePickerViewDelegate
-
 - (void)selectDatePicker:(NSDate *)date{
 
     [pickerView removeFromSuperview];
