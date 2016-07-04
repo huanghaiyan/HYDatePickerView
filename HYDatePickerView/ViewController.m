@@ -44,7 +44,7 @@
     pickerView.delegate = nil;
     if (date != nil){
         NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
-        [dateFormat setDateFormat:@"dd-MM-yyyy"];
+        [dateFormat setDateFormat:@"yyyy-MM-dd"];
         
         [self.dateTextField setText:[dateFormat stringFromDate:date]];
     } else {
