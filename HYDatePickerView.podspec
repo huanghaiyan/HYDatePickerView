@@ -1,4 +1,4 @@
-#
+
 #  Be sure to run `pod spec lint HYDatePickerView.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "HYDatePickerView"
   s.version      = "1.0.0"
-  s.summary      = "A short description of HYDatePickerView."
+  s.summary      = "HYDatePickerView is a date picker."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -63,12 +63,12 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-    s.platform     = :ios
-    s.platform     = :ios, "5.0"
+    #s.platform     = :ios
+    s.platform     = :ios, "8.0"
 
   #  When using multiple platforms
-    s.ios.deployment_target = "5.0"
-    s.osx.deployment_target = "10.7"
+    s.ios.deployment_target = "8.0"
+  # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "HYDatePickerView", "HYDatePickerView/**/*.{h,m}"
-  s.exclude_files = "HYDatePickerView/Exclude"
+  # s.exclude_files = "HYDatePickerView/Exclude"
 
   # s.public_header_files = "HYDatePickerView/**/*.h"
 
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  # s.framework  = "UIKit"
+   s.framework  = "UIKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
