@@ -14,6 +14,7 @@
 		0102C8091D2643C900B496FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0102C8081D2643C900B496FD /* Assets.xcassets */; };
 		0102C80C1D2643C900B496FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0102C80A1D2643C900B496FD /* LaunchScreen.storyboard */; };
 		0102C8161D2643F000B496FD /* HYDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0102C8151D2643F000B496FD /* HYDatePickerView.m */; };
+		0194CA481D81086D00B46D2D /* Reveal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0194CA471D81086D00B46D2D /* Reveal.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		0102C80D1D2643C900B496FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0102C8141D2643F000B496FD /* HYDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDatePickerView.h; sourceTree = "<group>"; };
 		0102C8151D2643F000B496FD /* HYDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDatePickerView.m; sourceTree = "<group>"; };
+		0194CA471D81086D00B46D2D /* Reveal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reveal.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0194CA481D81086D00B46D2D /* Reveal.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +64,7 @@
 		0102C7FB1D2643C900B496FD /* HYDatePickerView */ = {
 			isa = PBXGroup;
 			children = (
+				0194CA471D81086D00B46D2D /* Reveal.framework */,
 				0102C8131D2643F000B496FD /* HYDatePickerView */,
 				0102C7FF1D2643C900B496FD /* AppDelegate.h */,
 				0102C8001D2643C900B496FD /* AppDelegate.m */,
@@ -277,8 +281,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HYDatePickerView",
+				);
 				INFOPLIST_FILE = HYDatePickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huanghy.HYDatePickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -288,8 +303,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HYDatePickerView",
+				);
 				INFOPLIST_FILE = HYDatePickerView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lz",
+					"-framework",
+					Reveal,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.huanghy.HYDatePickerView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -314,6 +340,7 @@
 				0102C8121D2643C900B496FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
